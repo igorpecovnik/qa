@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+  
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Not on Monday or Wednesday
+        if: github.event.schedule != ''
+        run: echo "Via cron"
+      - name: Every time
+        run: echo "This step will always run"
