@@ -1,9 +1,9 @@
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/16 * * * *'
-    - cron: '0 * * * *'
-    - cron: '40 * * * *'
+#  schedule:
+#    - cron: '*/16 * * * *'
+#    - cron: '0 * * * *'
+#    - cron: '40 * * * *'
   
 jobs:
   test_schedule:
